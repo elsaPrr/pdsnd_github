@@ -65,12 +65,12 @@ def get_filters():
                      "data? Use commas to list the names.\n>", weekdays)
 
         # confirm the user input
-        confirmation = choice("\nPlease confirm that you would like to apply "
+        conf = choice("\nPlease confirm that you would like to apply "
                               "the following filter(s) to the bikeshare data."
                               "\n\n City(ies): {}\n Month(s): {}\n Weekday(s)"
                               ": {}\n\n [y] Yes\n [n] No\n\n>"
                               .format(city, month, day))
-        if confirmation == 'y':
+        if conf == 'y':
             break
         else:
             print("\nLet's try this again!")
