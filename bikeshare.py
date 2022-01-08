@@ -91,7 +91,7 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
-    
+    #display the start-time
     print("\nThe program is loading the data for the filters of your choice.")
     start_time = time.time()
 
@@ -111,6 +111,7 @@ def load_data(city, month, day):
         df = pd.read_csv(CITY_DATA[city])
 
     # create columns to display statistics
+    
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['Month'] = df['Start Time'].dt.month
     df['Weekday'] = df['Start Time'].dt.weekday_name
@@ -133,7 +134,6 @@ def load_data(city, month, day):
     print('-'*40)
 
     return df
-
 
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
