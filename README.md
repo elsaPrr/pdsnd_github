@@ -14,3 +14,5 @@ bikeshare.py
 chicago.csv
 washington.csv
 new_york_city.csv
+
+All three csv files are listed in .gitignore
